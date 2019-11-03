@@ -43,6 +43,10 @@ People are the major entity and users of the infrastructure. Without them, corpo
 
 All people have the following attributes:
 
+* ID
+  * Type - GUID
+* Name
+  * Type - String
 * Sex
   * Type - Enum
     * Values - [Male, Female]
@@ -75,7 +79,7 @@ All people have the following attributes:
     * Maximum - 100
 * Household
   * Type - Array
-    * Type - People (Object ref/id)
+    * Type - People
 * Preferences
   * Type - Object
     * Properties    
@@ -118,6 +122,26 @@ This is a classification of people that do not produce income or debt. Types inc
 * Retired
 
 ### Corporations
+
+Corporations are similar to people in that they share some attributes, but instead of the usual classifications that define people, corporations exist to hire people and must own at least 1 system. Common attributes include:
+
+* ID
+  * Type - GUID
+* Name
+  * Type - String
+* Balance
+  * Type - Number
+  * Units - United States Dollars
+* Credit
+  * Type - Number
+  * Units - United States Dollars
+* Employees
+  * Type - Array
+    * Type - People
+* Property
+  * Type - Array
+    * Type - System
+* 
 
 ## Major Concepts
 
